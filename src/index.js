@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Signup from './components/Signup.jsx';
+import Navbar from './components/Navbar.jsx';
+import Login from './components/Login.jsx';
+import Dashboard from './components/Dashboard.jsx'
+import Footer from './components/Footer.jsx';
+import Welcome from './components/Welcome.jsx';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Navbar/>
+
+    <Routes>
+     <Route exact path="/" element={<Welcome />}></Route>
+      <Route exact path="/Signup" element={<Signup />}></Route>
+      <Route exact path="/Login" element={<Login />}></Route>
+      <Route exact path="/Dashboard" element={<Dashboard />}></Route>
+    </Routes>
+
+    <Footer/>
+
+  </BrowserRouter>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+
+
+
+
