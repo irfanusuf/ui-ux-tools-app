@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2023 My Task app. All rights reserved.</p>
+      <p>&copy; 2023 UI/UX Tools app. All rights reserved.</p>
     </footer>
   );
 }
