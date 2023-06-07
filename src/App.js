@@ -4,8 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Desktop1 from "./pages/Desktop1";
-import Desktop2 from "./pages/Desktop2";
+import SignUp from "./pages/SignUp";
 import { useEffect } from "react";
 
 function App() {
@@ -28,10 +27,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/desktop-2":
-        title = "";
-        metaDescription = "";
-        break;
     }
 
     if (title) {
@@ -50,8 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Desktop1 />} />
-      <Route path="/desktop-2" element={<Desktop2 />} />
+      <Route path="/" element={<SignUp />} />
     </Routes>
   );
 }

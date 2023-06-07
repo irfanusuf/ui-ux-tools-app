@@ -3,3 +3,26 @@ body {
   margin: 0;
   line-height: normal;
 }
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-mid: 17px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-blue-100: #4619ff;
+  --color-blue-200: rgba(110, 25, 255, 0.2);
+  --color-gray-100: #212121;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-21xl: 40px;
+  --padding-lg: 18px;
+  --padding-xl: 20px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}
