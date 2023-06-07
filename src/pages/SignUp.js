@@ -43,51 +43,13 @@ const SignUp = () => {
 
   return (
     <div className="signup">
-      <img className="image-1-icon" alt="" src="/image-1@2x.png" />
-      <div className="signup-child" />
+      <img className="background-image" alt="" src="/signupbg.png" />
       <div className="logo-wrapper">
         <div className="logo">LOGO</div>
       </div>
       <div className="create-an-account">Create an account</div>
+      
       <div className="email">Email</div>
-      <div className="password">Password</div>
-      <a className="already-have-an-container" onClick={onAlreadyHaveAnClick}>
-        <span>{`Already have an account ? `}</span>
-        <b className="signin">Signin</b>
-      </a>
-      <button
-        className="create-account"
-        autoFocus
-        onClick={onCreateAccountClick}
-      >
-        <div className="create-account1">Create Account</div>
-      </button>
-      <button
-        className="continue-with-google"
-        autoFocus
-        onClick={onContinueWithGoogleClick}
-      >
-        <img
-          className="flat-color-iconsgoogle"
-          alt=""
-          src="/flatcoloriconsgoogle.svg"
-        />
-        <div className="continue-with-google1">Continue With Google</div>
-      </button>
-      <div className="or">Or</div>
-      <a className="by-creating-an-container" onClick={onByCreatingAnClick}>
-        {`By creating an account you agree to our Company’s `}
-        <span className="terms">Terms</span>
-        {` and `}
-        <span className="terms">Privacy Policy</span>
-      </a>
-      <input
-        className="password-input"
-        type="password"
-        placeholder="Enter your Password"
-        required
-        autoFocus
-      />
       <input
         className="email-input"
         type="email"
@@ -95,39 +57,97 @@ const SignUp = () => {
         required
         autoFocus
       />
-      <button className="ai-wrapper" autoFocus onClick={onFrameButtonClick}>
-        <b className="ai">Ai</b>
+      
+
+      <div className="password">Password</div>
+      <input
+        className="password-input"
+        type="password"
+        placeholder="Enter your Password"
+        required
+        autoFocus
+      />
+    
+      <button
+        className="create-account"
+        autoFocus
+        onClick={onCreateAccountClick}
+      >
+        <div className="create-account-text">Create Account</div>
       </button>
+
+      <a className="by-creating-container" onClick={onByCreatingAnClick}>
+        {`By creating an account you agree to our Company’s `}
+        <span className="terms">Terms</span>
+        {` and `}
+        <span className="terms">Privacy Policy</span>
+      </a>
+
+      <div className="or">Or</div>
+
+      <button
+        className="continue-with-google"
+        autoFocus
+        onClick={onContinueWithGoogleClick}>
+        <img
+          className="google-icon"
+          alt=""
+          src="/flatcoloriconsgoogle.svg"
+        />
+        <div className="continue-with-google-text">Continue With Google</div>
+      </button>
+
+      <a className="already-have-an-account" onClick={onAlreadyHaveAnClick}>
+        <span>{`Already have an account ? `}</span>
+        <b className="signin">Signin</b>
+      </a>
+
+
+
+      <button className="ai-wrapper"
+        autoFocus
+        onClick={onFrameButtonClick}>
+        <b className="gradient-button-text">Ai</b>
+      </button>
+
+
       <button
         className="illustrations-wrapper"
         autoFocus
-        onClick={onFrameButton1Click}
-      >
-        <b className="ai">Illustrations</b>
+        onClick={onFrameButton1Click}>
+        <b className="gradient-button-text">Illustrations</b>
       </button>
+
+
       <button
         className="ui-kits-wrapper"
         autoFocus
-        onClick={onFrameButton2Click}
-      >
-        <b className="ai">Ui Kits</b>
+        onClick={onFrameButton2Click}>
+        <b className="gradient-button-text">Ui Kits</b>
       </button>
-      <button className="icons-wrapper" autoFocus onClick={onFrameButton3Click}>
-        <b className="ai">Icons</b>
+
+
+      <button className="icons-wrapper"
+        autoFocus
+        onClick={onFrameButton3Click}>
+        <b className="gradient-button-text">Icons</b>
       </button>
+
+
       <button
         className="d-elements-wrapper"
         autoFocus
-        onClick={onFrameButton4Click}
-      >
-        <b className="ai">3D Elements</b>
+        onClick={onFrameButton4Click}>
+        <b className="gradient-button-text">3D Elements</b>
       </button>
+
+
+
       <button
         className="images-wrapper"
         autoFocus
-        onClick={onFrameButton5Click}
-      >
-        <b className="ai">Images</b>
+        onClick={onFrameButton5Click}>
+        <b className="gradient-button-text">Images</b>
       </button>
     </div>
   );
