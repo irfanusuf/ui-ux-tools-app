@@ -51,7 +51,7 @@ const SignUp = () => {
       
       <div className="email">Email</div>
       <input
-        className="email-input"
+        className="email-input"  
         type="email"
         placeholder="Enter Your Email"
         required

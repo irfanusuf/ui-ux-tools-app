@@ -128,7 +128,7 @@
   text-decoration: none;
   position: absolute;
   top: 590px;
-  left: 55px;
+  left: 80px;
   font-size: 12px;
   line-height: 15px;
   color: #000;
@@ -187,7 +187,7 @@
   position: relative;
   font-size: var(--font-size-xl);
   line-height: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: left;
 }
 .ai-wrapper,
@@ -197,7 +197,7 @@
 .images-wrapper,
 .ui-kits-wrapper {
   cursor: pointer;
-  border: 0;
+  border: solid rgba(128, 126, 0, 0.763) 2px;
   padding: var(--padding-3xs) var(--padding-21xl);
   position: absolute;
   background: transparent;
@@ -249,7 +249,7 @@
 
 
 
-@media (max-width: 523px) {
+@media (max-width: 573px) {
   .ai-wrapper,
   .d-elements-wrapper,
   .icons-wrapper,
@@ -259,4 +259,72 @@
   .ui-kits-wrapper {
     display: none;
   }
+
+}
+
+@media (max-width: 520px){
+  .ai-wrapper,
+  .d-elements-wrapper,
+  .icons-wrapper,
+  .illustrations-wrapper,
+  .background-image,
+  .images-wrapper,
+  .ui-kits-wrapper {
+    display: none;
+  }
+
+
+.email-input,
+.create-account,
+.continue-with-google,
+.password-input{
+  width: 380px;
+  left:40px;
+}
+.already-have-an-account{
+  left: 85px;
+}
+.email,
+.password,
+.by-creating-container,
+.logo-wrapper,
+.create-an-account{
+  left:40px;
+}
+.or{
+  left: 220px;
+}
+}
+
+@media (max-width: 430px){
+  .ai-wrapper,
+  .d-elements-wrapper,
+  .icons-wrapper,
+  .illustrations-wrapper,
+  .background-image,
+  .images-wrapper,
+  .ui-kits-wrapper {
+    display: none;
+  }
+.email-input,
+.create-account,
+.continue-with-google,
+.password-input{
+  width: 350px;
+  left:35px;
+}
+.already-have-an-account{
+  left: 65px;
+}
+.email,
+.password,
+.by-creating-container,
+.logo-wrapper,
+.create-an-account{
+  left:35px;
+}
+.or{
+  left: 205px;
+}
+
 }
