@@ -121,14 +121,16 @@
   left: 330px;
   top: 590px;
   cursor:pointer;
+  font-size: 14px;
 }
 .by-creating-container {
+  cursor:pointer;
   position: absolute;
   top: 590px;
   left: 80px;
-  font-size: 15px;
-  line-height: 18px;
-  color: #000;
+  font-size: 14px;
+  line-height: 15px;
+  
 }
 .terms {
   text-decoration: underline;
