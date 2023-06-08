@@ -113,9 +113,7 @@
   color: var(--color-white);
   text-align: center;
 }
-.terms {
-  text-decoration: underline;
-}
+
 
 .forgot-password{
   text-decoration: underline;
@@ -125,16 +123,15 @@
   cursor:pointer;
 }
 .by-creating-container {
-  text-decoration: none;
   position: absolute;
   top: 590px;
   left: 80px;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 15px;
+  line-height: 18px;
   color: #000;
-  display: inline-block;
-  width: 361px;
-  cursor: pointer;
+}
+.terms {
+  text-decoration: underline;
 }
 
 .or {
@@ -175,7 +172,7 @@
   position: absolute;
   top: 791px;
   left: 135px;
-  line-height: 10px;
+  line-height: 20px;
   cursor: pointer;
 }
 
@@ -246,22 +243,6 @@
 }
 
 
-
-
-
-@media (max-width: 573px) {
-  .ai-wrapper,
-  .d-elements-wrapper,
-  .icons-wrapper,
-  .illustrations-wrapper,
-  .background-image,
-  .images-wrapper,
-  .ui-kits-wrapper {
-    display: none;
-  }
-
-}
-
 @media (max-width: 520px){
   .ai-wrapper,
   .d-elements-wrapper,
@@ -293,6 +274,9 @@
 }
 .or{
   left: 220px;
+}
+.forgot-password{
+  left: 260px;
 }
 }
 
@@ -326,5 +310,43 @@
 .or{
   left: 205px;
 }
+.forgot-password{
+  left: 220px;
+}
+}
 
+
+@media (max-width: 400px){
+  .ai-wrapper,
+  .d-elements-wrapper,
+  .icons-wrapper,
+  .illustrations-wrapper,
+  .background-image,
+  .images-wrapper,
+  .ui-kits-wrapper {
+    display: none;
+  }
+.email-input,
+.create-account,
+.continue-with-google,
+.password-input{
+  width: 300px;
+  left:50px;
+}
+.already-have-an-account{
+  left: 65px;
+}
+.email,
+.password,
+.by-creating-container,
+.logo-wrapper,
+.create-an-account{
+  left:50px;
+}
+.or{
+  left: 190px;
+}
+.forgot-password{
+  left: 190px;
+}
 }

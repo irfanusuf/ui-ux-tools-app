@@ -1,43 +1,47 @@
-import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Pages.css";
 const SignIn = () => {
-  const onAlreadyHaveAnClick = useCallback(() => {
-    //TODO: go to sign page
-  }, []);
 
-  const onCreateAccountClick = useCallback(() => {
+  const navigate = useNavigate();
+  function ToSignUpPage () {
+  
+    // Redirect to signup
+    navigate('/'); 
+  }
+
+  const onCreateAccountClick = (() => {
     //TODO: call an api for register
   }, []);
 
-  const onContinueWithGoogleClick = useCallback(() => {
+  const onContinueWithGoogleClick = (() => {
     //TODO: register using google accout
   }, []);
 
-  const onByCreatingAnClick = useCallback(() => {
+  const onByCreatingAnClick = (() => {
     //TODO: policy page
   }, []);
 
-  const onFrameButtonClick = useCallback(() => {
+  const onFrameButtonClick = (() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton1Click = useCallback(() => {
+  const onFrameButton1Click = (() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton2Click = useCallback(() => {
+  const onFrameButton2Click = (() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton3Click = useCallback(() => {
+  const onFrameButton3Click = (() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton4Click = useCallback(() => {
+  const onFrameButton4Click = (() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton5Click = useCallback(() => {
+  const onFrameButton5Click = (() => {
     //TODO: ai api only when register
   }, []);
 
@@ -94,7 +98,7 @@ const SignIn = () => {
         <div className="continue-with-google-text">Continue With Google</div>
       </button>
 
-      <a className="already-have-an-account" onClick={onAlreadyHaveAnClick}>
+      <a className="already-have-an-account" onClick={ToSignUpPage}>
         <span>{`Don't have an account ? `}</span>
         <b className="signin">Create now</b>
       </a>
