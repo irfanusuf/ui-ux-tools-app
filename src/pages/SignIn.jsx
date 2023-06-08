@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import "./SignUp.css";
-const SignUp = () => {
+import "./Pages.css";
+const SignIn = () => {
   const onAlreadyHaveAnClick = useCallback(() => {
     //TODO: go to sign page
   }, []);
@@ -42,12 +42,12 @@ const SignUp = () => {
   }, []);
 
   return (
-    <div className="signup">
-      <img className="background-image" alt="" src="/signupbg.png" />
+    <div className="main-page">
+      <img className="background-image" alt="" src="/bg (2).jpg" />
       <div className="logo-wrapper">
-        <div className="logo">LOGO</div>
+        <img alt ='Logo' src=""/> 
       </div>
-      <div className="create-an-account">Create an account</div>
+      <div className="create-an-account">Login</div>
       
       <div className="email">Email</div>
       <input
@@ -73,14 +73,11 @@ const SignUp = () => {
         autoFocus
         onClick={onCreateAccountClick}
       >
-        <div className="create-account-text">Create Account</div>
+        <div className="create-account-text">Login</div>
       </button>
 
-      <a className="by-creating-container" onClick={onByCreatingAnClick}>
-        {`By creating an account you agree to our Company’s `}
-        <span className="terms">Terms</span>
-        {` and `}
-        <span className="terms">Privacy Policy</span>
+      <a className="forgot-password" onClick={onByCreatingAnClick}>
+        <span >Forgot Password ? </span>
       </a>
 
       <div className="or">Or</div>
@@ -98,8 +95,8 @@ const SignUp = () => {
       </button>
 
       <a className="already-have-an-account" onClick={onAlreadyHaveAnClick}>
-        <span>{`Already have an account ? `}</span>
-        <b className="signin">Signin</b>
+        <span>{`Don't have an account ? `}</span>
+        <b className="signin">Create now</b>
       </a>
 
 
@@ -153,4 +150,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
