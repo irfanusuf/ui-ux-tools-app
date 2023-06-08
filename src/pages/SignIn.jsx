@@ -1,47 +1,50 @@
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Pages.css";
 const SignIn = () => {
 
   const navigate = useNavigate();
-  function ToSignUpPage () {
+
+  function ToSignUpPage() {
   
-    // Redirect to signup
+    // Redirect to signup page
     navigate('/'); 
   }
+ 
 
-  const onCreateAccountClick = (() => {
+  const onCreateAccountClick = useCallback(() => {
     //TODO: call an api for register
   }, []);
 
-  const onContinueWithGoogleClick = (() => {
+  const onContinueWithGoogleClick = useCallback(() => {
     //TODO: register using google accout
   }, []);
 
-  const onByCreatingAnClick = (() => {
+  const onByCreatingAnClick = useCallback(() => {
     //TODO: policy page
   }, []);
 
-  const onFrameButtonClick = (() => {
+  const onFrameButtonClick = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton1Click = (() => {
+  const onFrameButton1Click = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton2Click = (() => {
+  const onFrameButton2Click = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton3Click = (() => {
+  const onFrameButton3Click = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton4Click = (() => {
+  const onFrameButton4Click = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
-  const onFrameButton5Click = (() => {
+  const onFrameButton5Click = useCallback(() => {
     //TODO: ai api only when register
   }, []);
 
