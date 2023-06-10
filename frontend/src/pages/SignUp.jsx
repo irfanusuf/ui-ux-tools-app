@@ -1,20 +1,48 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Pages.css";
+import axios from 'axios';
+
+
+
+
+
 const SignUp = () => {
-
-
   const navigate = useNavigate();
 
   function ToLoginPage() {
-  
     // Redirect to login page
-    navigate('/login'); 
+    navigate('/login');
   }
-  
-  const onCreateAccountClick = useCallback(() => {
-    //TODO: call an api for register
-  }, []);
+
+
+
+  const registerUser = async () => {
+    try {
+      // Get input values from form or user input
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      const response = await axios.post('/register', {
+        email,
+        password
+      });
+
+      
+    } catch (error) {
+      res.status(500).json({
+        sucess: false,
+        message: error.message
+      });
+    }
+  };
+
+  registerUser();
+
+
 
   const onContinueWithGoogleClick = useCallback(() => {
     //TODO: register using google accout
@@ -53,41 +81,43 @@ const SignUp = () => {
     <div className="main-page">
       <img className="background-image" alt="" src="/signupbg.png" />
       <div className="logo-wrapper">
-      <img alt ='Logo' src=""/> 
+        <img alt='Logo' src="" />
       </div>
       <div className="create-an-account">Create an account</div>
-      
+
       <div className="email">Email</div>
       <input
-        className="email-input"  
+        className="email-input"
         type="email"
+        id="emailInput" // Add the id attribute
         placeholder="Enter Your Email"
         required
         autoFocus
       />
-      
 
       <div className="password">Password</div>
       <input
         className="password-input"
         type="password"
+        id="passwordInput" // Add the id attribute
         placeholder="Enter your Password"
         required
         autoFocus
       />
-    
+
+
       <button
         className="create-account"
         autoFocus
-        onClick={onCreateAccountClick}
+        onClick={registerUser}
       >
         <div className="create-account-text">Create Account</div>
       </button>
 
       <a className="by-creating-container" onClick={onByCreatingAnClick}>
-        {`By creating an account you agree to our Company’s `}<br/>
+        {`By creating an account you agree to our Company’s `}<br />
         <span className="terms">Terms & conditions </span>
-        {` and `} 
+        {` and `}
         <span className="terms">Privacy Policy</span>
       </a>
 
