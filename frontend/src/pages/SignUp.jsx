@@ -1,47 +1,53 @@
-import { useCallback } from "react";
+import { useCallback, useState ,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import "./Pages.css";
 import axios from 'axios';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
-  function ToLoginPage() {
-    // Redirect to login page
+  useEffect(() => {
+    // Simulate an asynchronous delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  const ToLoginPage = () => {
     navigate('/login');
-  }
+  };
 
 
-
-  const registerUser = async () => {
+  const registerUser = useCallback(async (e) => {
+    e.preventDefault(); 
     try {
-      // Get input values from form or user input
-      const emailInput = document.getElementById('emailInput');
-      const passwordInput = document.getElementById('passwordInput');
-
-      const email = emailInput.value;
-      const password = passwordInput.value;
-
       const response = await axios.post('/register', {
         email,
         password
       });
-
+      toast.success("Registration successful",{position : toast.POSITION.TOP_CENTER, autoClose: 500,}); // Show success toast
       
+      navigate('/login');// Handle the response or perform any necessary actions
     } catch (error) {
-      res.status(500).json({
-        sucess: false,
-        message: error.message
-      });
+      toast.error("Type your credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 500,}); // Show error toast
     }
-  };
+  }, [email, password , navigate]);
 
-  registerUser();
+  const handleEmailChange = useCallback((e) => {
+    setEmail(e.target.value);
+  }, []);
 
+  const handlePasswordChange = useCallback((e) => {
+    setPassword(e.target.value);
+  }, []);
 
 
   const onContinueWithGoogleClick = useCallback(() => {
@@ -84,13 +90,14 @@ const SignUp = () => {
         <img alt='Logo' src="" />
       </div>
       <div className="create-an-account">Create an account</div>
-
+<form>
       <div className="email">Email</div>
       <input
         className="email-input"
         type="email"
-        id="emailInput" // Add the id attribute
         placeholder="Enter Your Email"
+        value= {email}
+        onChange={handleEmailChange}
         required
         autoFocus
       />
@@ -99,12 +106,13 @@ const SignUp = () => {
       <input
         className="password-input"
         type="password"
-        id="passwordInput" // Add the id attribute
         placeholder="Enter your Password"
+        value= {password}
+        onChange={handlePasswordChange}
         required
         autoFocus
       />
-
+</form>
 
       <button
         className="create-account"

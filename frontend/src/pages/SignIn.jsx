@@ -50,7 +50,7 @@ const SignIn = () => {
 
   return (
     <div className="main-page">
-      <img className="background-image" alt="" src="/bg (2).jpg" />
+      <img className="background-image" alt="" src="/bg (3).jpg" />
       <div className="logo-wrapper">
         <img alt ='Logo' src=""/> 
       </div>

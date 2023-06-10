@@ -1,11 +1,10 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-const User = require('./models/User'); // Assuming the User model is in a separate file
 const cors = require('cors');
-
+const Controllers = require("./controllers/Users");
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 4000
 
 // Using Middlewares
 app.use (cors());
@@ -25,34 +24,5 @@ app.listen(PORT, () => {
 });
 
 
-// Register API route
-app.post("/register", async (req, res) => {
-  try {
-    const { email, password } = req.body;
-
-    // Check if the username or email already exists
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(409).json({
-        sucess: false,
-        message: "Email already exists"
-      });
-    }
-
-    // Create a new user object
-    const newUser = new User({
-      email,
-      password
-    });
-
-    // Save the user to the database
-    const savedUser = await newUser.save();
-
-    res.status(201).json(savedUser);
-  } catch (error) {
-    res.status(500).json({
-      sucess: false,
-      message: error.message
-    });
-  }
-});
+//  API routes
+app.post("/register", Controllers.registerUSer);
